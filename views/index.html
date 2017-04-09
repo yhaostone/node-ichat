@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iChat</title>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.cookie.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="js/chat.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img height="100px" width="200px" src="image/logo-livechat.png">
+                    </a>
+                    <span id="user" style="float:right">Hi </span>
+                </div>
+            </div>
+        </nav>
+        <div class="modal-body row">
+            <div class="col-md-3">
+                <!-- first column here -->
+                    <ul id="users" class="list-group">
+                        <li class="list-group-item list-group-item-success">Online Users</li>
+                    </ul>
+            </div>
+            <div class="col-md-9">
+                <!-- second column here -->
+                <div class="container">
+                    <li class="list-group-item list-group-item-info">Public Room</li>
+                    <div id="messageList" class="message-list border-bottom-0 rounded-top">
+                        <ul id="messages" class="list-group"></ul>
+                    </div>   
+                    <br>
+                    <form action="">
+                        <textarea class="form-control" rows="3" placeholder="Message" id="message"></textarea>
+                                
+                        <button type="submit" class="btn btn-primary" style="float:right" id="send">Send</button> 
+                    </form>
+                    <br>
+                    <div id="notification" class="notification"></div>
+                </div>
+            </div>
+        </div>
+        <footer align="center" style="background-color: #DAF0FB">
+            <div class="container">
+                <div class="navbar-footer">
+                    &copy; 2017 <a href="https://yhaostone.github.io" target='_blank'>Yan Hao</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
